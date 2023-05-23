@@ -7,34 +7,34 @@ const app = express();
 
 app.use(express.static("public"));
 
-// var con = mysql.createConnection({
-//     host: "db4free.net",
-//     user: "project_2802",
-//     password: "56844978@yR",
-//     database: "db_2802",
-//     port: 3306
-// });
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "db_2802",
+    port: 3306
+});
 
 
-// con.connect(function (err) {
-//     if (err)
-//         throw err;
+con.connect(function (err) {
+    if (err)
+        throw err;
 
-//     else
-//         console.log("Connected!");
+    else
+        console.log("Connected!");
 
-//     // var sql = "INSERT into restraunts"+(); add the data to be inserted here
+    // var sql = "INSERT into restraunts"+(); add the data to be inserted here
 
-//     //   con.query(sql, function (err, result) {
+    //   con.query(sql, function (err, result) {
 
-//     //     if (err) 
-//     //     throw err;
+    //     if (err) 
+    //     throw err;
 
 
-//     //     console.log(result);
-//     //   });
+    //     console.log(result);
+    //   });
 
-// });
+});
 
 app.get('/', (req, res) => {
     res.send('Hello, World!');
@@ -48,155 +48,155 @@ app.listen(process.env.PORT || 3000, function () {
 
 
 
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.get("/", function (req, res) {
+app.get("/", function (req, res) {
 
-//     res.sendFile(__dirname + "/mainportal.html");
+    res.sendFile(__dirname + "/mainportal.html");
 
 
 
 
-// });
+});
 
-// app.get("/collab.html", function (req, res) {
+app.get("/collab.html", function (req, res) {
 
-//     res.sendFile(__dirname + "/collab.html");
+    res.sendFile(__dirname + "/collab.html");
 
 
-// });
+});
 
-// app.get("/index.html", function (req, res) {
+app.get("/index.html", function (req, res) {
 
-//     res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/index.html");
 
 
-// });
+});
 
-// app.get("/join.html", function (req, res) {
+app.get("/join.html", function (req, res) {
 
-//     res.sendFile(__dirname + "/join.html");
+    res.sendFile(__dirname + "/join.html");
 
 
-// });
+});
 
-// app.get("/sign_in.html", function (req, res) {
+app.get("/sign_in.html", function (req, res) {
 
-//     res.sendFile(__dirname + "/sign_in.html");
+    res.sendFile(__dirname + "/sign_in.html");
 
 
-// });
+});
 
-// app.get("/contact.html", function (req, res) {
+app.get("/contact.html", function (req, res) {
 
-//     res.sendFile(__dirname + "/contact.html");
+    res.sendFile(__dirname + "/contact.html");
 
 
-// });
+});
 
 
-// app.post("/contact.html", function (req, res) {
+app.post("/contact.html", function (req, res) {
 
-//     var name = req.body.name;
-//     var email = req.body.email;
-//     var message = req.body.message;
+    var name = req.body.name;
+    var email = req.body.email;
+    var message = req.body.message;
 
-//     var sql = "INSERT into contact values(" + "'" + name + "'" + "," + "'" + email + "'" + "," + "'" + message + "'" + ");";
+    var sql = "INSERT into contact values(" + "'" + name + "'" + "," + "'" + email + "'" + "," + "'" + message + "'" + ");";
 
 
-//     con.query(sql, function (err, result) {
+    con.query(sql, function (err, result) {
 
-//         if (err)
-//             throw err;
+        if (err)
+            throw err;
 
 
-//         console.log(result);
-//     });
+        console.log(result);
+    });
 
 
-//     res.sendFile(__dirname + "/contact.html");
+    res.sendFile(__dirname + "/contact.html");
 
-// });
+});
 
-// app.post("/join.html", function (req, res) {
+app.post("/join.html", function (req, res) {
 
-//     var name = req.body.name;
-//     var email = req.body.email;
-//     var password = req.body.password;
+    var name = req.body.name;
+    var email = req.body.email;
+    var password = req.body.password;
 
-//     var sql = "INSERT into signup values(" + "'" + name + "'" + "," + "'" + email + "'" + "," + "'" + password + "'" + ");";
+    var sql = "INSERT into signup values(" + "'" + name + "'" + "," + "'" + email + "'" + "," + "'" + password + "'" + ");";
 
 
-//     con.query(sql, function (err, result) {
+    con.query(sql, function (err, result) {
 
-//         if (err)
-//             throw err;
+        if (err)
+            throw err;
 
 
-//         console.log(result);
-//     });
+        console.log(result);
+    });
 
 
-//     res.sendFile(__dirname + "/sign_in.html");
+    res.sendFile(__dirname + "/sign_in.html");
 
-// });
+});
 
-// var check;
+var check;
 
-// app.post("/sign_in.html", function (req, res) {
+app.post("/sign_in.html", function (req, res) {
 
-//     var email = req.body.email;
-//     var password = req.body.password;
+    var email = req.body.email;
+    var password = req.body.password;
 
-//     var sql = "Select * from signup where email='" + email + "'";
+    var sql = "Select * from signup where email='" + email + "'";
 
 
-//     con.query(sql, function (err, result) {
+    con.query(sql, function (err, result) {
 
-//         if (err)
-//             throw err;
+        if (err)
+            throw err;
 
 
-//         check = result[0].Password;
-//         console.log(check);
+        check = result[0].Password;
+        console.log(check);
 
 
-//         if (password === check)
-//             res.sendFile(__dirname + "/availability.html");
+        if (password === check)
+            res.sendFile(__dirname + "/availability.html");
 
-//         else
-//             res.sendFile(__dirname + "/sign_in.html");
+        else
+            res.sendFile(__dirname + "/sign_in.html");
 
-//     });
+    });
 
 
 
 
-// });
+});
 
-// app.post("/availability.html", function (req, res) {
+app.post("/availability.html", function (req, res) {
 
-//     var email = req.body.email;
-//     var password = req.body.password;
-//     var date = req.body.date;
-//     var food = req.body.food;
+    var email = req.body.email;
+    var password = req.body.password;
+    var date = req.body.date;
+    var food = req.body.food;
 
-//     var sql = "INSERT into restraunts values(" + "'" + email + "'" + "," + "'" + password + "'" + "," + "'" + date + "'" + "," + "'" + food + "'" + ");";
+    var sql = "INSERT into restraunts values(" + "'" + email + "'" + "," + "'" + password + "'" + "," + "'" + date + "'" + "," + "'" + food + "'" + ");";
 
 
-//     con.query(sql, function (err, result) {
+    con.query(sql, function (err, result) {
 
-//         if (err)
-//             throw err;
+        if (err)
+            throw err;
 
 
-//         console.log(result);
-//     });
+        console.log(result);
+    });
 
 
-//     res.sendFile(__dirname + "/availability.html");
+    res.sendFile(__dirname + "/availability.html");
 
-// });
+});
 
 
 
