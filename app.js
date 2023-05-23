@@ -11,8 +11,7 @@ var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "db_2802",
-    port: 3306
+    database: "btob",
 });
 
 

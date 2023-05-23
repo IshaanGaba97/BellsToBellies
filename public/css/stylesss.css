@@ -9,7 +9,6 @@ body{
   overflow-x: hidden;
   position: relative;
   font-family: 'Mukta', sans-serif;
-
 }
 
 .bg_img{
@@ -72,7 +71,7 @@ body{
   padding:10px;
   width:30%;
   height:max-content;
-  box-shadow: 0px 0px 5px black,0px 0px 15px  #393646, 0px 0px 25px #543F84;
+  box-shadow: 0px 0px 5px black,0px 0px 15px  #C1F8D0, 0px 0px 25px #543F84;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -127,11 +126,9 @@ body{
 }
 .about{
   width:70%;
-  padding: 25px;
-  margin: 20px;
   font-weight: 600;
   font-size: larger;
-  background-color: #f9f8f7;
+  background-color: #E1D7C6;
   color:#19376D;
 }
 
@@ -206,7 +203,7 @@ margin:5px 0px  10px 0px;
 }
 .sm_handles a{
   text-decoration: none;
-color: aliceblue  ;
+color: white  ;
   font-size: 20px;
   transition: transform .5s;
   width:40px;
@@ -217,10 +214,30 @@ color: aliceblue  ;
   border-radius: 50%;
 }
 .sm_handles a:hover{
-  color: #19376D;
+  color: #243D25;
   transform: scale(1.2);
-  background-color: #867070;
+  background-color: aliceblue;
 }
+
+.table_food{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table, th, td {
+
+  border: 1px solid black;
+  padding: 20px;
+  background-color: #a38585;
+  color: white;
+  /* border-radius: 6px; */
+}
+
+table{
+  margin: 20px;
+}
+
 
 @media (max-width: 768px){ 
 
