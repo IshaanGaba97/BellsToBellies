@@ -8,6 +8,8 @@ body{
   height:100vh;
   overflow-x: hidden;
   position: relative;
+  font-family: 'Mukta', sans-serif;
+
 }
 
 .bg_img{
@@ -125,10 +127,12 @@ body{
 }
 .about{
   width:70%;
+  padding: 25px;
+  margin: 20px;
   font-weight: 600;
   font-size: larger;
   background-color: #f9f8f7;
-  color:#19376D;
+  color:#19376D;s
 }
 
 .container_about{
